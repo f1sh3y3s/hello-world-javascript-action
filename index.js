@@ -5,8 +5,9 @@ async function run() {
     try {
         // `who-to-greet` input defined in action metadata file
         const nameToGreet = core.getInput('who-to-greet');
+        const myToken = core.getInput("myToken")
         console.log(`Hello ${nameToGreet}!`);
-        console.log(`token ${github.token} ${github.context.token} `)
+        console.log(`token ${myToken} ${github.token} `)
         // const octokit = github.getOctokit(github.token)
 
         // const workflows = await octokit.request('GET /repos/{owner}/{repo}/actions/workflows', github.context.repo)
