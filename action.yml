@@ -1,10 +1,16 @@
 name: "Hello World"
 description: "Greet someone and record the time"
+permissions:
+  contents: read
 inputs:
   who-to-greet: # id of input
     description: "Who to greet"
     required: true
     default: "World"
+  github-token: # github token
+    description: "github token"
+    default: ${{secret.GITHUB_TOKEN}}
+    required: true
 outputs:
   time: # id of output
     description: "The time we greeted you"
