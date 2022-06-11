@@ -7,14 +7,6 @@ inputs:
     description: "Who to greet"
     required: true
     default: "World"
-  github-token: # github token
-    description: "github token"
-<<<<<<< HEAD
-    default: ${{secrets.GITHUB_TOKEN}}
-=======
-    default: ${{secret.GITHUB_TOKEN}}
->>>>>>> 15850e5186d5f3f32b932ec990277bbeed5e43bf
-    required: true
 outputs:
   time: # id of output
     description: "The time we greeted you"
