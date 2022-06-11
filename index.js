@@ -6,11 +6,11 @@ async function run() {
         // `who-to-greet` input defined in action metadata file
         const nameToGreet = core.getInput('who-to-greet');
         console.log(`Hello ${nameToGreet}!`);
-        console.log(github.token)
-        const octokit = github.getOctokit(github.context.token)
+        console.log(`token ${github.token} ${github.context.token} `)
+        // const octokit = github.getOctokit(github.token)
 
-        const workflows = await octokit.request('GET /repos/{owner}/{repo}/actions/workflows', github.context.repo)
-        console.log(workflows)
+        // const workflows = await octokit.request('GET /repos/{owner}/{repo}/actions/workflows', github.context.repo)
+        // console.log(workflows)
         const time = (new Date()).toTimeString();
         core.setOutput("time", time);
         // Get the JSON webhook payload for the event that triggered the workflow
